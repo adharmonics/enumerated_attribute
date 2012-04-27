@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "enumerated_attribute"
-  s.version = "0.3.0.beta1"
+  s.version = "0.3.0.beta2"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeff Patmon", "Turadg Aleahmad"]
