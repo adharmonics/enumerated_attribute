@@ -24,7 +24,7 @@ module EnumeratedAttribute
 				return write_attribute(name, val) unless self.class.has_enumerated_attribute?(name)
 				val = nil if val == ''
 				val_str = val.to_s if val
-				val_sym = val.to_sym if val
+				val_sym = val.to_s.to_sym if val
 				return instance_variable_set('@'+name, val_sym) unless self.has_attribute?(name)
 				write_attribute(name, val_str)
 				val_sym
@@ -57,7 +57,7 @@ module EnumeratedAttribute
 				atts = super
 				atts.each do |k,v|
 					if self.class.has_enumerated_attribute?(k)
-						atts[k] = v.to_sym if v
+						atts[k] = v.to_s.to_sym if v
 					end
 				end
 				atts
