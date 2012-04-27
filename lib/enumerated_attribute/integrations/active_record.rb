@@ -39,7 +39,7 @@ module EnumeratedAttribute
 				return instance_variable_get('@'+name) unless self.has_attribute?(name)
 				#this is an enumerated active record attribute
 				val = read_attribute(name)
-				val = val.to_sym if !!val
+				val = val.to_s.to_sym if !!val
 				val
 			end
 
